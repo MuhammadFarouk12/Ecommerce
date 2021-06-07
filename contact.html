@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="includes/nav.css">
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+    <nav>
+      <div class="container"> 
+        <div class="logo"><img src="images/white_logo.svg" alt="Logo"></div>
+        <ul> 
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="donate.html">Donate</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="icons"><i class="fas fa-cart-plus" id="cart" data-count="0"></i><i class="fas fa-bars bars"></i></div>
+      </div>
+    </nav>
+    <aside class="adder" id="aside">
+      <header class="adder" id="headerOfAside">
+        <h5>Your Cart</h5><i class="fas fa-times" id="times"></i>
+      </header>
+      <div id="result"></div>
+      <h5 id="not">NO ITEMS FOUND.</h5>
+    </aside>
+    <section class="n" id="black"></section>
+    <div class="loading"> </div>
+    <header class="header header-contact">
+      <div class="bg">
+        <div class="pic"></div>
+        <h1>Contact Acme Outdoors</h1>
+        <div class="boxes">
+          <div class="box"><i class="fas fa-comment"></i>
+            <h3>Contact Us</h3>
+            <p>Just want to say hi? We'd love to hear from you. We love our customers and community! </p>
+            <button class="btn">Send Us A Message</button>
+          </div>
+          <div class="box"><i class="fas fa-comment-dots"></i>
+            <h3>Get Support</h3>
+            <p>Have an issue with an order or with a product you purchased from us? Fill out our support form.</p>
+            <button class="btn">Contact Support</button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section id="contact">
+      <div class="container">
+        <div id="us">
+          <h2 class="title">Contact Us</h2>
+          <div class="info"><span>Acme Outdoors</span><span>123 Rainy Street</span><span>Oklahoma</span></div>
+          <div class="nums"><span><b>General Inquiries:</b> (405) 555-5555</span><span><b>Customer Support:</b> (405) 555-5556</span></div>
+        </div>
+        <form>
+          <h2>Contact Form</h2>
+          <p>Send us a message and we'll get back to you as soon as we can! </p><label for="name">Name</label>
+<input type="text" name="name" id="name" placeholder="Enter Your Name">
+<label for="email">Email Adress</label>
+<input type="email" name="email" id="email" placeholder="Enter Your Email Adress">
+<label for="message">Your Message</label>
+<textarea name="message" id="message" placeholder="Enter Your Message"></textarea>
+<button class="btn" type="submit">submit</button>
+        </form>
+      </div>
+    </section>
+    <footer>
+      <div class="container"> 
+        <div class="logo"> <img src="images/white_logo.svg" alt="Acme"></div>
+        <div class="icons"><i class="fab fa-facebook"> </i><i class="fab fa-github"> </i><i class="fab fa-codepen"></i></div>
+      </div><span>Designed By <a href="https://webflow.com/">Webflow</a> , Coded By <a href="#">MuhammadFK</a></span>
+    </footer>
+    <script src="includes/nav.js"> </script>
+    <script src="index.js"> </script>
+  </body>
+</html>

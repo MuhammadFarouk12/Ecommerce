@@ -1,0 +1,177 @@
+body {
+  overflow-x: hidden;
+}
+
+nav {
+  z-index: 1000000000000000;
+  background-color: var(--pink-color);
+  position: fixed;
+  width: 100%;
+}
+nav .container {
+  display: flex;
+  align-items: center;
+  height: 10vh;
+  min-height: 70px;
+  justify-content: space-between;
+  position: relative;
+}
+nav .container .logo {
+  flex: 2;
+}
+nav .container ul {
+  list-style: none;
+  display: flex;
+  flex: 9;
+  justify-content: flex-end;
+}
+nav .container ul li {
+  margin: 0 10px;
+  padding: 4px 10px;
+  border-radius: 5px;
+  background: transparent;
+  transition: 0.3s;
+}
+nav .container ul li:hover {
+  background: var(--dark-color);
+}
+nav .container ul li a {
+  text-decoration: none;
+  color: white;
+}
+nav .container .icons {
+  display: flex;
+  justify-content: space-around;
+  flex: 1;
+}
+nav .container .icons :last-child {
+  display: none;
+}
+nav .container .icons i {
+  padding: 10px;
+  background: var(--dark-color);
+  color: white;
+  border-radius: 5px;
+}
+nav .container .icons #cart {
+  position: relative;
+}
+nav .container .icons #cart::after {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: normal;
+  font-size: 10px;
+  content: attr(data-count);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: white;
+  color: var(--dark-color);
+  top: -5.5px;
+  right: -5.5px;
+  border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+  nav .container .logo {
+    flex: 10;
+  }
+  nav .container ul {
+    position: absolute;
+    top: 0vh;
+    background: var(--pink-color);
+    right: -120%;
+    width: 100%;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    z-index: 0;
+    gap: 20px;
+    align-items: center;
+    transition: 0.3s;
+  }
+  nav .container ul li {
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    margin: 0;
+  }
+  nav .container .activeUl {
+    right: 0 !important;
+  }
+  nav .container .icons {
+    flex: 2;
+    justify-content: center !important;
+    z-index: 0;
+  }
+  nav .container .icons i {
+    margin-left: 10px;
+  }
+  nav .container .icons :last-child {
+    z-index: 1 !important;
+    display: block;
+  }
+}
+/* aside */
+aside {
+  width: 500px;
+  transition: 0.2s ease-in;
+  z-index: 10000000000000;
+  opacity: 0;
+  position: fixed;
+  right: -100%;
+  top: 0;
+  height: 100vh;
+  background: var(--white);
+  opacity: 1;
+}
+@media (max-width: 500px) {
+  aside {
+    width: 100% !important;
+  }
+}
+aside.activeAside {
+  width: 500px;
+  right: 0;
+  opacity: 1;
+}
+aside header {
+  height: 10%;
+  border-bottom: 1px solid var(--pink-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  margin: 0 40px;
+}
+aside header i {
+  color: var(--pink-color);
+}
+aside h5 {
+  font-size: var(--h5);
+  font-weight: normal;
+}
+aside #not {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+section#black {
+  width: 100%;
+  height: 100%;
+  background: rgba(2, 2, 2, 0);
+  position: fixed;
+  z-index: 1000;
+  transform: scale(0);
+  transition: background 0.3s ease-in;
+}
+section#black.activeSection {
+  transform: scale(1);
+  background: rgba(2, 2, 2, 0.7);
+}
+
+/*# sourceMappingURL=nav.css.map */
